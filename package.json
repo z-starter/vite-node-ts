@@ -1,0 +1,25 @@
+{
+  "name": "vite-node-ts",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development && nodemon --exec node --import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"ts-node/esm\", pathToFileURL(\"./\"));' ./src/main.ts",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/ws": "^8.5.10",
+    "@z-code/vite-plugin-swc": "^0.4.0",
+    "nodemon": "^3.1.0",
+    "rollup-plugin-node-externals": "^7.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  },
+  "packageManager": "yarn@4.2.2",
+  "dependencies": {
+    "@hono/node-server": "^1.11.1",
+    "hono": "^4.3.11",
+    "ws": "^8.17.0"
+  }
+}
